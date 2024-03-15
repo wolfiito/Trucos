@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super () }}
+    <link rel="stylesheet" href="../static/css/styleMenu.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
+{% endblock head %}
+
+{% block title %}
+    {{ super() }}
+{% endblock title %}
+
+{% block menu %}
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <div class="barra-lateral">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <div class="nav__button">
+                        <a href="" class="nav__link">Inicio</a>
+                    </div>
+                </li>
+
+                <li class="nav__item nav__item--click">
+                    <div class="nav__button nav__button--click">
+                        <a href="" class="nav__link">Carrusel</a>
+                        <img src="../static/assets/arrow.svg" alt="" class="list__arrow">
+                    </div>
+
+                    <ul class="nav__show">
+                        <li class="nav__inside">
+                            <a href="/carruselNormal" class="nav__link nav__link--inside">Carrusel Normal</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="" class="nav__link nav__link--inside">Carrusel Numerado</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__button">
+                        <a href="" class="nav__link">Prueba</a>
+                    </div>
+                </li>
+                <li class="nav__item nav__item--click">
+                    <div class="nav__button nav__button--click">
+                        <a href="" class="nav__link">Enumerar</a>
+                        <img src="../static/assets/arrow.svg" alt="" class="list__arrow">
+                    </div>
+
+                    <ul class="nav__show">
+                        <li class="nav__inside">
+                            <a href="/carruselNormal" class="nav__link nav__link--inside">Carrusel Normal</a>
+                        </li>
+                        <li class="nav__inside">
+                            <a href="" class="nav__link nav__link--inside">Carrusel Numerado</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <div class="nav__button">
+                        <a href="" class="nav__link">Prueba2</a>
+                    </div>
+                </li>
+            </ul>
+                <!-- <li>
+                    <a href="/hora_silenciosa">
+                        <ion-icon class="fas fa-solid fa-book-bible"></ion-icon>
+                        <span class="navegador-opcion">Devocional</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/oracion">
+                        <ion-icon class="fas fa-solid fa-hands-praying"></ion-icon>
+                        <span class="navegador-opcion">Oracion</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon class="fas fa-solid fa-brain"></ion-icon>
+                        <span class="navegador-opcion">Memorización</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/tabla_puntos_sumar">
+                        <ion-icon class="fas fa-solid fa-ranking-star"></ion-icon>
+                        <span class="navegador-opcion">Puntos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon class="fas fa-solid fa-gear"></ion-icon>
+                        <span class="navegador-opcion">Ajustes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout">
+                        <ion-icon class="fas fa-solid fa-right-from-bracket"></ion-icon>
+                        <span class="navegador-opcion">Logout</span>
+                    </a>
+                </li> -->
+        </nav>
+        <div>
+            <div class="linea"></div>
+            <div class="modo-oscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span class="dark_mode_txt">Dark Mode</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="usuario">
+                <img src="../static/images/{{ usuario }}.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">{{ usuario }}</span>
+                        <!-- <span class="email" style="opacity: 0;">jhampier@gmail.com</span> -->
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock menu %}
+
+{% block contenido %}
+    {{ super() }}
+{% endblock contenido %}
+
+{% block script %}
+    {{ super() }}
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='js/contenido.js') }}"></script> -->
+    <script src="../static/js/menu.js"></script>
+{% endblock script %}

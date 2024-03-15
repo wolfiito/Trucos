@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../static/css/style.css">
+    {% endblock head %}
+
+    <title>
+        {% block title %}
+            Tricks |  
+        {% endblock title %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            {% block menu %}
+            
+            {% endblock menu %}
+        </nav>
+    </header>
+<main class="contenedor-principal">
+    <h1 id="metodo" style="font-size: 2rem;">
+        {% block title_trick %}
+        
+        {% endblock title_trick %}
+    </h1>
+    {% block contenido %}
+    <div>
+        <input type="text" id="palabra_entrada" name="palabra" placeholder="Ingresa una palabra">
+        <button onclick="transformarCarrusel()">Transformar</button>
+    </div>
+    <div id="resultado_transformacion"></div>
+    {% endblock contenido %}
+</main>
+
+
+{% block script %}
+    
+{% endblock script %}
+</body>
+</html>
