@@ -30,21 +30,10 @@ menu.addEventListener("click", () => {
     if (barraLateral.classList.contains("max-barra-lateral")) {
         menu.children[0].style.display = "none";
         menu.children[1].style.display = "block";
-        menu.style.backgroundColor = "var(--color-boton-circulo)";
-        menu.style.color = "var(--color-circulo)";
     } else {
         menu.children[0].style.display = "block";
         menu.children[1].style.display = "none";
-        menu.style.backgroundColor = "var(--color-circulo)";
-        menu.style.color = "var(--color-boton-circulo)";
     }
-    // if (window.innerWidth <= 320) {
-    //     barraLateral.classList.add("mini-barra-lateral");
-    //     main.classList.add("min-main");
-    //     spans.forEach((span) => {
-    //         span.classList.add("oculto");
-    //     });
-    // }
 });
 
 palanca.addEventListener("click", toggleDarkMode);
@@ -53,7 +42,6 @@ let listElements = document.querySelectorAll('.nav__button--click');
 
 listElements.forEach(listElement =>{
     listElement.addEventListener('click', ()=>{
-
         listElement.classList.toggle('arrow');
 
         let height = 0;

@@ -1,0 +1,46 @@
+{% extends 'nav.html' %}
+
+{% block head %}
+    {{ super () }}
+    <link rel="stylesheet" href="../static/css/styleIndex.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
+{% endblock head %}
+
+{% block title %}
+    {{ super() }}
+    Inicio
+{% endblock title %}
+
+{% block menu %}
+    {{ super() }}
+{% endblock menu %}
+
+{% block banner %}
+    {{ super() }}
+    <div class="banner">
+        <img src="../static/img/banner.jpg" alt="Banner">
+    </div>
+{% endblock banner %}
+
+{% block contenido %}
+    {{ super() }}
+     <section class="informacion">
+        <h1>Bienvenido</h1>
+        <p>
+            En este sitio, te ofrecemos una herramienta versátil y en constante evolución para darle vida a tus textos de una manera creativa y eficiente. ¿Necesitas convertir tu texto en un formato específico? ¡Estás en el lugar correcto!
+        </p>
+        <p>
+            ¿Tienes alguna idea para un nuevo método o función? ¡Nos encantaría escucharte! Siéntete libre de contactarnos a través de WhatsApp para compartir tus sugerencias y contribuir al crecimiento de nuestra plataforma.
+        </p>
+        <p>
+            Simplemente, comienza explorando las diversas opciones que tenemos para ti. Desde la simplicidad de un texto plano hasta la creatividad de un carrusel, ¡las posibilidades son infinitas!
+        </p>
+    </section>
+    <footer>
+        <!-- Información de contacto -->
+        <div class="contacto">
+            <h2>¿Tienes alguna sugerencia?</h2>
+            <p>Puedes escribirnos al WhatsApp: [+00 123456789]</p>
+        </div>
+    </footer>
+{% endblock contenido %}

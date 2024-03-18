@@ -21,21 +21,23 @@
             
             {% endblock menu %}
         </nav>
+
+        {% block banner %}
+
+        {% endblock banner %}
     </header>
-<main class="contenedor-principal">
-    <h1 id="metodo" style="font-size: 2rem;">
-        {% block title_trick %}
+    <main class="contenedor-principal">
+        <h1 id="metodo">
+            {% block title_trick %}
+            
+            {% endblock title_trick %}
+        </h1>
+        {% block contenido %}
         
-        {% endblock title_trick %}
-    </h1>
-    {% block contenido %}
-    <div>
-        <input type="text" id="palabra_entrada" name="palabra" placeholder="Ingresa una palabra">
-        <button onclick="transformarCarrusel()">Transformar</button>
-    </div>
-    <div id="resultado_transformacion"></div>
-    {% endblock contenido %}
-</main>
+        {% endblock contenido %}
+    </main>
+    
+    
 
 
 {% block script %}

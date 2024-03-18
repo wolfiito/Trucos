@@ -1,0 +1,36 @@
+{% extends 'nav.html' %}
+
+{% block title %}
+ {{ super() }}
+{% endblock title %}
+
+{% block contenido %}
+    {{ super() }}
+    <div class="select-container">
+        <label for="casas">Selecciona tu casa:</label>
+        <select id="casas" name="casas">
+            <option value="Slytherin">Slytherin</option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+        </select>
+    </div>
+
+    <div class="emoji-container">
+        <label for="emoji">Introduce un emoji:</label>
+        <input type="text" id="emoji" name="emoji" class="form-control" placeholder="Escribe un emoji">
+    </div>
+    
+    <div class="form-container">
+        <input type="text" id="palabra_entrada" name="palabra" class="form-control" placeholder="Ingresa una palabra" onkeypress="handleKeyPress(event)">
+        <div class="checkbox-container">
+            <label for="enumerar"><input type="checkbox" id="enumerar" name="enumerar">Enumerado</label>
+            <label for="espaciar"><input type="checkbox" id="espaciar" name="espaciar">Espaciado</label>
+            <label for="Prueba"><input type="checkbox" id="checkbox3" name="checkbox3"> Prueba</label>
+        </div>
+        <div class="button-container">
+            <button onclick="transformarCarrusel()" class="btn btn-primary">Transformar</button>
+        </div>
+    </div>
+    <div id="resultado_transformacion" class="output-container"></div>
+{% endblock contenido %}

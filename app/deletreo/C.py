@@ -1,0 +1,38 @@
+from flask import Blueprint, request, jsonify, render_template
+from ..vocal_a_numero import sustituirVocales as enumerar
+from ..espaciado import espaciar_cadena as espaciar
+
+deletreoC_bp = Blueprint('deletreoC', __name__)
+
+@deletreoC_bp.route('/deletreoC')
+def deletreoEnC():
+    return render_template('deletreoC.html')
+
+def deletrear(palabra):
+    resultado = []
+    deletreoC = []
+    for palabra in palabra.split():
+        deletreoC.append(palabra)
+        for i in range(1, len(palabra) - 1):
+            deletreoC.append(palabra[i])
+        deletreoC.append(palabra[::-1])
+        resultado.append('\n'.join(deletreoC))
+        deletreoC = []
+    return '```\n' + '\n\n'.join(resultado) + '```'  # Invertimos toda la palabra
+
+
+
+@deletreoC_bp.route('/hacerDeletreoC', methods=['POST'])
+def deletreoC():
+    palabra = request.json.get('palabra')
+    enumerate = request.json.get('enumerar')
+    espaciado = request.json.get('espaciar')
+    # metodo = request.form.get('metodo')
+    resultado = deletrear(palabra)
+    if enumerate: 
+        resultado = enumerar(resultado)
+    elif espaciado:
+        resultado = espaciar(resultado)
+        
+    print(resultado)
+    return jsonify({'resultado': resultado})
