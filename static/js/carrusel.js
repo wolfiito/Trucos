@@ -40,8 +40,16 @@ async function transformarCarrusel() {
                 },
                 body: JSON.stringify({ palabra: palabra, enumerar: enumerar, espaciar: espaciar})
             });
+        } else if (metodo == 'Cruce de Palabras') {
+            response = await fetch("/cruce_palabras", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ palabra: palabra, enumerar: enumerar, espaciar: espaciar})
+            });
         }
-
+        
         if (!response.ok) {
             throw new Error('Ocurrió un error...');
         }

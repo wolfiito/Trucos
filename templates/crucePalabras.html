@@ -1,12 +1,15 @@
 {% extends 'formulario.html' %}
+
 {% block title %}
     {{ super() }}
-    Convertir a Parsel 
+    Carrusel
 {% endblock title %}
+
 {% block title_trick %}
     {{ super() }}
-    Español a Parsel
+    Cruce de Palabras    
 {% endblock title_trick %}
+
 {% block script %}
     {{ super() }}
     <script src="{{ url_for('static', filename='js/carrusel.js') }}"></script>

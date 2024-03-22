@@ -27,12 +27,21 @@ def deletreoC():
     palabra = request.json.get('palabra')
     enumera = request.json.get('enumerar')
     espaciado = request.json.get('espaciar')
+    mayus = request.json.get('mayusculas')
+    minus = request.json.get('minusculas')
+    sinFormato = request.json.get('sinformato')
     # metodo = request.form.get('metodo')
     resultado = deletrear(palabra)
     if enumera: 
         resultado = enumerar(resultado)
     if espaciado:
         resultado = espaciar(resultado)
+    if mayus:
+        resultado = resultado.upper
+    if minus:
+        resultado = resultado.lower
+    if sinFormato:
+        pass
         
     print(resultado)
     return jsonify({'resultado': resultado})

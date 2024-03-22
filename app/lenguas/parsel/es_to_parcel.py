@@ -22,7 +22,9 @@ def esToParcel():
     palabra = request.json.get('palabra')
     enumera = request.json.get('enumerar')
     espaciado = request.json.get('espaciar')
-    
+    mayus = request.json.get('mayusculas')
+    minus = request.json.get('minusculas')
+    sinFormato = request.json.get('sinformato')
     if espaciado:
         palabra = espaciar(palabra)
     
@@ -36,5 +38,14 @@ def esToParcel():
     
     if enumera:
         texto_traducido = enumerar(texto_traducido)
-    print(texto_traducido)
+    mayus = request.json.get('mayusculas')
+    minus = request.json.get('minusculas')
+    sinFormato = request.json.get('sinformato')
+    # metodo = request.form.get('metodo')
+    if mayus:
+        resultado = resultado.upper
+    if minus:
+        resultado = resultado.lower
+    if sinFormato:
+        pass
     return jsonify({ 'resultado': texto_traducido })

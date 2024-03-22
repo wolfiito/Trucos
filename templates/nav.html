@@ -27,25 +27,19 @@
                         <a href="/" class="nav__link navegador-opcion">Inicio</a>
                     </div>
                 </li>
-
-                <li class="nav__item nav__item--click">
-                    <div class="nav__button nav__button--click">
+                <li class="nav__item">
+                    <div class="nav__button">
                         <a href="/carruselNormal" class="nav__link navegador-opcion">Carrusel</a>
-                        <!-- <img src="../static/assets/arrow.svg" alt="" class="list__arrow"> -->
                     </div>
-
-                    <!-- <ul class="nav__show">
-                        <li class="nav__inside">
-                            <a href="/carruselNormal" class="nav__link nav__link--inside navegador-opcion">Carrusel Normal</a>
-                        </li>
-                        <li class="nav__inside">
-                            <a href="#" class="nav__link nav__link--inside navegador-opcion">Carrusel Numerado</a>
-                        </li>
-                    </ul> -->
+                </li>
+                <li class="nav__item">
+                    <div class="nav__button">
+                        <a href="/crucePalabras" class="nav__link navegador-opcion">Cruce Palabra</a>
+                    </div>
                 </li>
                 <li class="nav__item nav__item--click">
                     <ul class="nav__button nav__button--click">
-                        <li> <a href="" class="nav__link navegador-opcion">Deletreos</a></li>
+                        <li> <a class="nav__link navegador-opcion">Deletreos</a></li>
                         <img src="../static/assets/arrow.svg" alt="" class="list__arrow">
                     </ul>
 
@@ -57,7 +51,7 @@
                 </li>
                 <li class="nav__item nav__item--click">
                     <ul class="nav__button nav__button--click">
-                        <li> <a href="" class="nav__link navegador-opcion">Lenguas</a></li>
+                        <li> <a class="nav__link navegador-opcion">Lenguas</a></li>
                         <img src="../static/assets/arrow.svg" alt="" class="list__arrow">
                     </ul>
 
@@ -103,7 +97,5 @@
 
 {% block script %}
     {{ super() }}
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> -->
-    <!-- <script src="{{ url_for('static', filename='js/contenido.js') }}"></script> -->
-    <script src="../static/js/menu.js"></script>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
 {% endblock script %}
