@@ -6,10 +6,10 @@ async function transformarCarrusel() {
     var espaciar = document.getElementById("espaciar");
     var casa = document.getElementById("casas").value;
 
-    casa = casa === 'Slytherin' ? '💚' :
-    casa === 'Hufflepuff' ? '💛' :
-    casa === 'Gryffindor' ? '❤️' :
-    casa === 'Ravenclaw' ? '💙' :
+    casa =  casa === 'Slytherin'  ? '💚' :
+            casa === 'Hufflepuff' ? '💛' :
+            casa === 'Gryffindor' ? '❤️' :
+            casa === 'Ravenclaw'  ? '💙' :
     '';
     let response = '';
     var emoji = document.getElementById("emoji").value
@@ -26,6 +26,14 @@ async function transformarCarrusel() {
             });
         } else if (metodo == 'Deletreo C') {
             response = await fetch("/hacerDeletreoC", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ palabra: palabra, enumerar: enumerar, espaciar: espaciar})
+            });
+        } else if (metodo == 'Español a Parsel') {
+            response = await fetch("/esp_to_parcel", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

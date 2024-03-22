@@ -3,7 +3,9 @@
 {% block title %}
  {{ super() }}
 {% endblock title %}
-
+{% block title_trick %}
+    {{ super() }}
+{% endblock title_trick %}
 {% block contenido %}
     {{ super() }}
     <div class="select-container">
@@ -22,7 +24,7 @@
     </div>
     
     <div class="form-container">
-        <input type="text" id="palabra_entrada" name="palabra" class="form-control" placeholder="Ingresa una palabra" onkeypress="handleKeyPress(event)">
+        <input type="text" id="palabra_entrada" name="palabra" class="form-control" placeholder="Ingresa una palabra" onkeydown="if(event.keyCode==13) transformarCarrusel()">
         <div class="checkbox-container">
             <label for="enumerar"><input type="checkbox" id="enumerar" name="enumerar">Enumerado</label>
             <label for="espaciar"><input type="checkbox" id="espaciar" name="espaciar">Espaciado</label>

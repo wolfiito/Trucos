@@ -10,6 +10,10 @@
     {{ super() }}
 {% endblock title %}
 
+{% block title_trick %}
+    {{ super() }}
+{% endblock title_trick %}
+
 {% block menu %}
     <div class="menu">
         <img src="../static/assets/menu.svg" class="menu__rayas"alt="">
@@ -49,15 +53,19 @@
                         <li class="nav__inside">
                             <a href="/deletreoC" class="nav__link nav__link--inside navegador-opcion">C</a>
                         </li>
-                        <li class="nav__inside">
-                            <a href="#" class="nav__link nav__link--inside navegador-opcion">Enumerar 2</a>
-                        </li>
                     </ul>
                 </li>
-                <li class="nav__item">
-                    <div class="nav__button">
-                        <a href="" class="nav__link navegador-opcion">Prueba2</a>
-                    </div>
+                <li class="nav__item nav__item--click">
+                    <ul class="nav__button nav__button--click">
+                        <li> <a href="" class="nav__link navegador-opcion">Lenguas</a></li>
+                        <img src="../static/assets/arrow.svg" alt="" class="list__arrow">
+                    </ul>
+
+                    <ul class="nav__show">
+                        <li class="nav__inside">
+                            <a href="/esToParcelTemplate" class="nav__link nav__link--inside navegador-opcion">Español a Parsel</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>

@@ -25,13 +25,13 @@ def deletrear(palabra):
 @deletreoC_bp.route('/hacerDeletreoC', methods=['POST'])
 def deletreoC():
     palabra = request.json.get('palabra')
-    enumerate = request.json.get('enumerar')
+    enumera = request.json.get('enumerar')
     espaciado = request.json.get('espaciar')
     # metodo = request.form.get('metodo')
     resultado = deletrear(palabra)
-    if enumerate: 
+    if enumera: 
         resultado = enumerar(resultado)
-    elif espaciado:
+    if espaciado:
         resultado = espaciar(resultado)
         
     print(resultado)

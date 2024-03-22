@@ -18,13 +18,13 @@ def carrusel(palabra):
 @carrusel_bp.route('/carruselConvertir', methods=['POST'])
 def carruselConvertir():
     palabra = request.json.get('palabra')
-    enumerate = request.json.get('enumerar')
+    enumera = request.json.get('enumerar')
     espaciado = request.json.get('espaciar')
     # metodo = request.form.get('metodo')
     resultado = carrusel(palabra)
-    if enumerate: 
+    if enumera: 
         resultado = enumerar(resultado)
-    elif espaciado:
+    if espaciado:
         resultado = espaciar(resultado)
         
     print(resultado)
